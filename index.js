@@ -5,10 +5,32 @@ const telephoneInput = document.getElementById('telephone');
 const toppingInputs = document.getElementsByName('topping');
 const sizeInputs = document.getElementsByName('size');
 const smallElements = document.querySelectorAll('.form-control small');
+const dateSection = document.querySelector('.form-container');
+const labels = document.querySelectorAll('.container-form label');
+const button = document.getElementById('submit');
+
+//Create elements
+const newHeading = document.createElement('h4');
+newHeading.textContent = 'Delivery Time';
+dateSection.appendChild(newHeading);
+
+
+const timeInput = document.createElement('input');
+timeInput.type = 'time';
+dateSection.appendChild(timeInput);
+
+//Iterate over a collection of elements
+for (let i = 0; i < labels.length; i++){
+  labels[i].style.color = "green";
+}
+
+
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
+
+  
   // Validate Name
   if (nameInput.value.trim() === '') {
     showError(nameInput, 'Name is required');
@@ -39,6 +61,14 @@ form.addEventListener('submit', function(event) {
   if (!Array.from(sizeInputs).some(input => input.checked)) {
     alert('Please select a size');
   }
+  
+button.addEventListener('click', function(e){
+  e.preventDefault();
+  button.value="Order Placed!"
+});
+newHeading.addEventListener('mouseover', function(){
+  newHeading.innerHTML = '<strong>Hover text</strong>'
+})
 });
 
 // Show error message
