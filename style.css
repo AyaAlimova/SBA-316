@@ -1,79 +1,92 @@
-
-body{
-background-color: aliceblue;
-font-family: 'Open Sans', sans-serif;
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 100vh ;
-margin: 0;
+body {
+  background-color: aliceblue;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
-.orderForm{
-background-color: antiquewhite;
-border-radius: 5px;
-margin-bottom: 20px;
 
-width: 700px;
-height: 900px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+.orderForm {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  width: 700px;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
 
 }
-h1{
+
+h1 {
   text-align: center;
   margin: 0 0 5px;
   padding-top: 20px;
-  padding-bottom: 1px;
+  padding-bottom: 5px;
+  color: darkmagenta;
 }
-  
-h3{
+
+h3 {
   text-align: center;
-  margin: 0 0 5px;;
-
+  margin: 0 0 5px;
+  color: chocolate;
+  
 }
 
-.form-container{
+.form-container {
   padding: 5px 40px;
   margin: 0 50px;
-
 }
+
 .container-form {
-  padding: 0 40px;
-  margin:  0 50px;
+ 
+  padding-left: 100px;
 }
 
-.form-control{
-margin-bottom: 10px;
-padding-bottom: 20px;
-padding-left: 20px;
-position: relative;
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+
 }
 
 .form-control label {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   display: block;
 }
 
-.form-control input{
+.form-control input {
   display: block;
-  padding: 5px;
+  padding: 3px;
+  width: 60%;
 }
-.pizzaInfo{
+
+.pizzaInfo {
   display: inline;
   margin-right: 20px;
 }
 
-.button-form{
+.button-form {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 50px;
 }
+
 #submit {
-cursor: pointer;
+  cursor: pointer;
   height: 40px;
   width: 200px;
+  background-color: cornflowerblue;
+  color:aliceblue
+
 }
-.form-control small{
+
+.form-control small {
   color: red;
   visibility: hidden;
 }

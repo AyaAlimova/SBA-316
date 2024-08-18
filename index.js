@@ -13,24 +13,20 @@ const button = document.getElementById('submit');
 const newHeading = document.createElement('h4');
 newHeading.textContent = 'Delivery Time';
 dateSection.appendChild(newHeading);
-
-
 const timeInput = document.createElement('input');
 timeInput.type = 'time';
 dateSection.appendChild(timeInput);
 
 //Iterate over a collection of elements
-for (let i = 0; i < labels.length; i++){
+for (let i = 0; i < labels.length; i++) {
   labels[i].style.color = "green";
 }
+//BOM
+window.alert("Welcome to the order page!")
 
-
-
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-
-  
   // Validate Name
   if (nameInput.value.trim() === '') {
     showError(nameInput, 'Name is required');
@@ -61,14 +57,15 @@ form.addEventListener('submit', function(event) {
   if (!Array.from(sizeInputs).some(input => input.checked)) {
     alert('Please select a size');
   }
-  
-button.addEventListener('click', function(e){
-  e.preventDefault();
-  button.value="Order Placed!"
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    button.value = "Order Placed!"
+  });
+
+  document.getElementById("orderForm").reset();
 });
-newHeading.addEventListener('mouseover', function(){
-  newHeading.innerHTML = '<strong>Hover text</strong>'
-})
+newHeading.addEventListener('mouseover', function () {
+  newHeading.innerHTML = '<strong>Central time</strong>'
 });
 
 // Show error message
